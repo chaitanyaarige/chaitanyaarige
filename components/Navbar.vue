@@ -1,7 +1,3 @@
-<script setup>
-const colorMode = useColorMode();
-</script>
-
 <template>
   <nav class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -231,8 +227,14 @@ const colorMode = useColorMode();
   </nav>
 </template>
 
-<style lang="postcss">
-body {
-  @apply min-h-screen bg-white dark:bg-gray-800 dark:text-gray-200;
+<script setup>
+const colorMode = useColorMode();
+</script>
+
+<style lang="css">
+.sidebrand {
+  display: flex;
+  margin: auto auto 0;
+  padding: 0.5rem;
 }
 </style>
