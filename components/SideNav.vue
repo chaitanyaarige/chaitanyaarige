@@ -2,7 +2,7 @@
   <div class="sidenav">
     <!-- <a :style="elected ? 'color:white'" href="#about">About</a> -->
 
-    <div>
+    <div class="image-outer">
       <img
         class="rounded-full imgcircle"
         src="../public/1696142348770.jpg"
@@ -56,6 +56,13 @@
       class="sideTitles"
     >
       Awards
+    </div>
+    <div
+      :class="['sideTitles', { elected: isActive === 'contactme' }]"
+      @click="changeActiveElement('contactme', $event)"
+      class="sideTitles"
+    >
+      Contact Me
     </div>
     <NuxtLink to="/about" class="sideTitles">Blog</NuxtLink>
   </div>
@@ -116,10 +123,12 @@ body {
   display: block;
 }
 
+.image-outer {
+  margin-bottom: 50px;
+}
 .imgcircle {
   border-radius: 50%;
-  border: 5px solid 0.5rem solid red;
-  margin-bottom: 50px;
+  border: 5px solid white;
 }
 
 .sidenav div:hover {
