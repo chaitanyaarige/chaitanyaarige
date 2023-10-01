@@ -94,7 +94,7 @@ export default {
 
 .main {
   margin-left: 17rem; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  font-size: 20px; /* Increased text to enable scrolling */
   padding: 40px 40px;
 }
 </style>
