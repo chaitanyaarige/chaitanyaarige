@@ -65,9 +65,11 @@ export default {
       isActive: "about",
     };
   },
+
   methods: {
     changeActiveElement: function (menu) {
       this.isActive = menu;
+      this.$emit("changeActiveElements", menu);
     },
   },
 };
