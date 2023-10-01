@@ -9,26 +9,24 @@
         alt=""
       />
     </div>
-    {{ isActive ? isActive : "null" }}
 
-    {{ computedClass }} {{ changeCalmarColor }}
+    {{ isActive }}
     <div
-      ref="editButton"
-      class="sideTitles"
-      :class="['tab-button', { active: isActive === 'about' }]"
+      :class="['sideTitles', { elected: isActive === 'about' }]"
       @click="changeActiveElement('about', $event)"
     >
       About
     </div>
     <div
-      ref="editButton"
-      :class="computedClass"
+      :class="publishedBooksMessage"
       class="sideTitles"
-      @click="changeActiveElement('experience', count, $event)"
+      @click="changeActiveElement('experience', $event)"
     >
       Experience
     </div>
-    <div class="sideTitles" href="#clients">Education</div>
+    <div @click="changeActiveElement('education')" class="sideTitles">
+      Education
+    </div>
     <div href="#contact" class="sideTitles">Skills</div>
     <div href="#contact" class="sideTitles">Projects</div>
     <div href="#contact" class="sideTitles">Interests</div>
@@ -36,28 +34,20 @@
   </div>
 </template>
 
-<script setup>
-let isActive = null;
-
-const changeActiveElement = (menu) => {
-  isActive = menu;
-  return isActive;
+<script>
+export default {
+  name: "my-component",
+  data() {
+    return {
+      isActive: null,
+    };
+  },
+  methods: {
+    changeActiveElement: function (menu) {
+      this.isActive = menu;
+    },
+  },
 };
-
-// const changeCalmarColor = computed(() => {
-//   if (isActive == null) {
-//     return "text-danger";
-//   } else if (isActive == "about") {
-//     return "text-yellow";
-//   } else if (isActive == "experience") {
-//     return "text-green";
-//   }
-// });
-
-// const publishedBooksMessage = computed(() => {
-//   return author.books.length > 0 ? "Yes" : "No";
-// });
-// // console.log(this.$refs.editButton);
 </script>
 
 <style scoped>
@@ -85,13 +75,14 @@ body {
 .elected {
   color: white;
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .sideTitles {
   padding: 6px 8px 6px 16px;
   cursor: pointer;
   text-transform: uppercase;
-  text-decoration: none;
+  /* text-decoration: none; */
   font-size: 25px;
   /* color: #818181; */
   color: rgba(255, 255, 255, 0.7);
