@@ -1,121 +1,12 @@
 <template>
-  <v-container class="ma-0 pa-0" id="appContainer" fluid>
-    <nuxt keep-alive />
-    <Navbar></Navbar>
-    <div class="sidenav">
-      <!-- <a :style="elected ? 'color:white'" href="#about">About</a> -->
+  <!-- <v-container class="ma-0 pa-0" id="appContainer" fluid> -->
+  <!-- <nuxt keep-alive /> -->
+  <!-- <Navbar></Navbar> -->
+  <SideNav></SideNav>
+  <!-- <NuxtLink to="/about"> About page </NuxtLink> -->
 
-      <div>
-        <img
-          class="rounded-full"
-          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      {{ isActive ? isActive : "null" }}
-      <div
-        ref="editButton"
-        :class="computedClass"
-        @click="changeActiveElement('about', $event)"
-      >
-        About
-      </div>
-      <div
-        ref="editButton"
-        :class="computedClass"
-        @click="changeActiveElement('experience', count, $event)"
-      >
-        Experience
-      </div>
-      <div href="#clients">Education</div>
-      <div href="#contact">Skills</div>
-      <div href="#contact">Projects</div>
-      <div href="#contact">Interests</div>
-      <div href="#contact">Awards</div>
-    </div>
-    <NuxtLink to="/about"> About page </NuxtLink>
-    <div class="main">
-      <h2 class="side-top">Sidebar</h2>
-      <p>This sidebar is of full height (100%) and always shown.</p>
-      <p>Scroll down the page to see the result.</p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-      <p>
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus.
-      </p>
-    </div>
-  </v-container>
+  <!-- </v-container> -->
 </template>
-
-<script setup>
-let isActive = null;
-
-const changeActiveElement = (menu) => {
-  isActive = menu;
-  return isActive;
-};
-
-const computedClass = reactive(() => ({
-  "about-active": isActive && isActive === "about",
-  "experience-active": isActive && isActive === "experience",
-}));
-
-// const publishedBooksMessage = computed(() => {
-//   return author.books.length > 0 ? "Yes" : "No";
-// });
-// // console.log(this.$refs.editButton);
-</script>
 
 <style>
 body {
