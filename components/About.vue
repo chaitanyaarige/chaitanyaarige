@@ -1,6 +1,4 @@
 <template>
-  <!-- <NuxtLink to="about">About</NuxtLink> -->
-
   <div class="main">
     <h2 class="side-top">Sidebar</h2>
     <p>This sidebar is of full height (100%) and always shown.</p>
@@ -22,11 +20,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "About",
-};
-</script>
+<script setup></script>
 
 <style scoped>
 .ds {
