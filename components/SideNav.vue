@@ -62,7 +62,7 @@ export default {
   name: "SideNav",
   data() {
     return {
-      isActive: null,
+      isActive: "about",
     };
   },
   methods: {

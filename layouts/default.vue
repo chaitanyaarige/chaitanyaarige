@@ -1,6 +1,6 @@
 <template>
   <!-- <v-container class="ma-0 pa-0" id="appContainer" fluid> -->
-  <!-- <nuxt keep-alive /> -->
+  <nuxt keep-alive />
   <!-- <Navbar></Navbar> -->
   <SideNav></SideNav>
   <!-- <NuxtLink to="/about"> About page </NuxtLink> -->
@@ -9,7 +9,7 @@
 </template>
 
 <style scoped>
-.ds {
+.main {
   display: block;
 }
 </style>
