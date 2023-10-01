@@ -4,8 +4,9 @@ export default defineNuxtConfig({
     port: 3000,
   },
   // components: true,
+  pages: true,
 
-  components: ["~/components"],
+  components: ["~/components", { path: "~/components/BlogComponents" }],
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
   colorMode: {
     classSuffix: "",

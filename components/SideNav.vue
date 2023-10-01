@@ -2,8 +2,12 @@
   <div class="sidenav">
     <!-- <a :style="elected ? 'color:white'" href="#about">About</a> -->
 
-    <div>
-      <img class="rounded-full" src="../public/1696142348770.jpg" alt="" />
+    <div class="image-outer">
+      <img
+        class="rounded-full imgcircle"
+        src="../public/1696142348770.jpg"
+        alt=""
+      />
     </div>
     <div
       :class="['sideTitles', { elected: isActive === 'about' }]"
@@ -53,6 +57,13 @@
     >
       Awards
     </div>
+    <div
+      :class="['sideTitles', { elected: isActive === 'contactme' }]"
+      @click="changeActiveElement('contactme', $event)"
+      class="sideTitles"
+    >
+      Contact Me
+    </div>
     <NuxtLink to="/about" class="sideTitles">Blog</NuxtLink>
   </div>
 </template>
@@ -65,9 +76,11 @@ export default {
       isActive: "about",
     };
   },
+
   methods: {
     changeActiveElement: function (menu) {
       this.isActive = menu;
+      this.$emit("changeActiveElements", menu);
     },
   },
 };
@@ -90,6 +103,7 @@ body {
   flex-direction: column;
   width: 17rem;
   height: 100vh;
+  padding: 50px;
 }
 
 .elected {
@@ -103,10 +117,18 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   /* text-decoration: none; */
-  font-size: 25px;
+  font-size: 22px;
   /* color: #818181; */
   color: rgba(255, 255, 255, 0.7);
   display: block;
+}
+
+.image-outer {
+  margin-bottom: 50px;
+}
+.imgcircle {
+  border-radius: 50%;
+  border: 5px solid white;
 }
 
 .sidenav div:hover {
