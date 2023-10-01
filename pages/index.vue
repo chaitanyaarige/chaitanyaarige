@@ -7,13 +7,22 @@
   <!-- <Navbar></Navbar> -->
   <SideNav @change-active-elements="menu"> </SideNav>
   <Transition name="slide-fade">
-    <About v-if="activeTab == 'about'" class="main"></About>
-  </Transition>
-  <Transition name="bounce">
     <Education v-if="activeTab == 'education'" class="main"></Education>
   </Transition>
   <Transition name="slide-fade">
     <Experience v-if="activeTab == 'experience'" class="main"></Experience>
+  </Transition>
+  <Transition name="slide-fade">
+    <About v-if="activeTab == 'about'" class="main"></About>
+  </Transition>
+  <Transition name="slide-fade">
+    <About v-if="activeTab == 'skills'" class="main"></About>
+  </Transition>
+  <Transition name="slide-fade">
+    <About v-if="activeTab == 'projects'" class="main"></About>
+  </Transition>
+  <Transition name="slide-fade">
+    <About v-if="activeTab == 'interests'" class="main"></About>
   </Transition>
 
   <!-- <NuxtLink to="/about"> About page </NuxtLink> -->
@@ -51,10 +60,6 @@ export default {
 </script>
 
 <style scoped>
-.main {
-  display: block;
-}
-
 .slide-fade-enter-active {
   transition: all 0.5s ease-out;
 }
@@ -90,6 +95,6 @@ export default {
 .main {
   margin-left: 17rem; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
-  padding: 10px 10px;
+  padding: 40px 40px;
 }
 </style>

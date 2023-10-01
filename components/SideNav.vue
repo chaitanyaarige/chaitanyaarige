@@ -3,7 +3,11 @@
     <!-- <a :style="elected ? 'color:white'" href="#about">About</a> -->
 
     <div>
-      <img class="rounded-full" src="../public/1696142348770.jpg" alt="" />
+      <img
+        class="rounded-full imgcircle"
+        src="../public/1696142348770.jpg"
+        alt=""
+      />
     </div>
     <div
       :class="['sideTitles', { elected: isActive === 'about' }]"
@@ -92,6 +96,7 @@ body {
   flex-direction: column;
   width: 17rem;
   height: 100vh;
+  padding: 50px;
 }
 
 .elected {
@@ -105,10 +110,16 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   /* text-decoration: none; */
-  font-size: 25px;
+  font-size: 22px;
   /* color: #818181; */
   color: rgba(255, 255, 255, 0.7);
   display: block;
+}
+
+.imgcircle {
+  border-radius: 50%;
+  border: 5px solid 0.5rem solid red;
+  margin-bottom: 50px;
 }
 
 .sidenav div:hover {
