@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2 class="side-top">About</h2>
+    <h2 class="side-top">Experience</h2>
     <p>This sidebar is of full height (100%) and always shown.</p>
     <p>Scroll down the page to see the result.</p>
     <p>
