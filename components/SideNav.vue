@@ -3,14 +3,8 @@
     <!-- <a :style="elected ? 'color:white'" href="#about">About</a> -->
 
     <div>
-      <img
-        class="rounded-full"
-        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-        alt=""
-      />
+      <img class="rounded-full" src="../public/1696142348770.jpg" alt="" />
     </div>
-
-    {{ isActive }}
     <div
       :class="['sideTitles', { elected: isActive === 'about' }]"
       @click="changeActiveElement('about', $event)"
@@ -18,28 +12,57 @@
       About
     </div>
     <div
-      :class="publishedBooksMessage"
+      :class="['sideTitles', { elected: isActive === 'experience' }]"
       class="sideTitles"
       @click="changeActiveElement('experience', $event)"
     >
       Experience
     </div>
-    <div @click="changeActiveElement('education')" class="sideTitles">
+    <div
+      :class="['sideTitles', { elected: isActive === 'education' }]"
+      @click="changeActiveElement('education')"
+      class="sideTitles"
+    >
       Education
     </div>
-    <div href="#contact" class="sideTitles">Skills</div>
-    <div href="#contact" class="sideTitles">Projects</div>
-    <div href="#contact" class="sideTitles">Interests</div>
-    <NuxtLink to="/about" class="sideTitles">Awards</NuxtLink>
+    <div
+      :class="['sideTitles', { elected: isActive === 'skills' }]"
+      @click="changeActiveElement('skills', $event)"
+      class="sideTitles"
+    >
+      Skills
+    </div>
+    <div
+      :class="['sideTitles', { elected: isActive === 'projects' }]"
+      @click="changeActiveElement('projects', $event)"
+      class="sideTitles"
+    >
+      Projects
+    </div>
+    <div
+      :class="['sideTitles', { elected: isActive === 'interests' }]"
+      @click="changeActiveElement('interests', $event)"
+      class="sideTitles"
+    >
+      Interests
+    </div>
+    <div
+      :class="['sideTitles', { elected: isActive === 'awards' }]"
+      @click="changeActiveElement('awards', $event)"
+      class="sideTitles"
+    >
+      Awards
+    </div>
+    <NuxtLink to="/about" class="sideTitles">Blog</NuxtLink>
   </div>
 </template>
 
 <script>
 export default {
-  name: "my-component",
+  name: "SideNav",
   data() {
     return {
-      isActive: null,
+      isActive: "about",
     };
   },
   methods: {
@@ -56,15 +79,12 @@ body {
 }
 
 .sidenav {
-  /* height: 100%; */
-  /* width: 160px; */
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #246896 !important;
   overflow-x: hidden;
-
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -91,16 +111,6 @@ body {
 
 .sidenav div:hover {
   color: #f1f1f1;
-}
-
-.side-top {
-  padding-top: 3rem;
-}
-
-.main {
-  margin-left: 17rem; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
 }
 
 @media screen and (max-height: 450px) {
