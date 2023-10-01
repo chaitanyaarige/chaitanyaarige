@@ -10,9 +10,12 @@
       />
     </div>
     {{ isActive ? isActive : "null" }}
+
+    {{ computedClass }} {{ changeCalmarColor }}
     <div
       ref="editButton"
-      :class="computedClass"
+      class="sideTitles"
+      :class="['tab-button', { active: isActive === 'about' }]"
       @click="changeActiveElement('about', $event)"
     >
       About
@@ -20,15 +23,16 @@
     <div
       ref="editButton"
       :class="computedClass"
+      class="sideTitles"
       @click="changeActiveElement('experience', count, $event)"
     >
       Experience
     </div>
-    <div href="#clients">Education</div>
-    <div href="#contact">Skills</div>
-    <div href="#contact">Projects</div>
-    <div href="#contact">Interests</div>
-    <div href="#contact">Awards</div>
+    <div class="sideTitles" href="#clients">Education</div>
+    <div href="#contact" class="sideTitles">Skills</div>
+    <div href="#contact" class="sideTitles">Projects</div>
+    <div href="#contact" class="sideTitles">Interests</div>
+    <NuxtLink to="/about" class="sideTitles">Awards</NuxtLink>
   </div>
 </template>
 
@@ -40,10 +44,15 @@ const changeActiveElement = (menu) => {
   return isActive;
 };
 
-const computedClass = reactive(() => ({
-  "about-active": isActive && isActive === "about",
-  "experience-active": isActive && isActive === "experience",
-}));
+// const changeCalmarColor = computed(() => {
+//   if (isActive == null) {
+//     return "text-danger";
+//   } else if (isActive == "about") {
+//     return "text-yellow";
+//   } else if (isActive == "experience") {
+//     return "text-green";
+//   }
+// });
 
 // const publishedBooksMessage = computed(() => {
 //   return author.books.length > 0 ? "Yes" : "No";
@@ -52,7 +61,63 @@ const computedClass = reactive(() => ({
 </script>
 
 <style scoped>
-.dr {
-  font-display: fallback;
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  /* height: 100%; */
+  /* width: 160px; */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #246896 !important;
+  overflow-x: hidden;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  height: 100vh;
+}
+
+.elected {
+  color: white;
+  font-weight: 600;
+}
+
+.sideTitles {
+  padding: 6px 8px 6px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 25px;
+  /* color: #818181; */
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+
+.sidenav div:hover {
+  color: #f1f1f1;
+}
+
+.side-top {
+  padding-top: 3rem;
+}
+
+.main {
+  margin-left: 17rem; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 </style>
