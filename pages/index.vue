@@ -4,7 +4,7 @@
     <Meta name="description" content="Chaitanya" />
   </Head>
   <!-- <nuxt keep-alive /> -->
-  <Navbar></Navbar>
+  <!-- <Navbar></Navbar> -->
   <SideNav @change-active-elements="menu"> </SideNav>
   <Transition name="slide-fade">
     <Education v-if="activeTab == 'education'" class="main"></Education>
