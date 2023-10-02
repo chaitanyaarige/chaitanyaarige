@@ -4,7 +4,7 @@
     <Meta name="description" content="Chaitanya" />
   </Head>
   <!-- <nuxt keep-alive /> -->
-  <!-- <Navbar></Navbar> -->
+  <Navbar></Navbar>
   <SideNav @change-active-elements="menu"> </SideNav>
   <Transition name="slide-fade">
     <Education v-if="activeTab == 'education'" class="main"></Education>
@@ -16,13 +16,13 @@
     <About v-if="activeTab == 'about'" class="main"></About>
   </Transition>
   <Transition name="slide-fade">
-    <About v-if="activeTab == 'skills'" class="main"></About>
+    <Skills v-if="activeTab == 'skills'" class="main"></Skills>
   </Transition>
   <Transition name="slide-fade">
-    <About v-if="activeTab == 'projects'" class="main"></About>
+    <Projects v-if="activeTab == 'projects'" class="main"></Projects>
   </Transition>
   <Transition name="slide-fade">
-    <About v-if="activeTab == 'interests'" class="main"></About>
+    <Interests v-if="activeTab == 'interests'" class="main"></Interests>
   </Transition>
 
   <!-- <NuxtLink to="/about"> About page </NuxtLink> -->
@@ -59,7 +59,7 @@ export default {
 // }
 </script>
 
-<style scoped>
+<style>
 .slide-fade-enter-active {
   transition: all 0.5s ease-out;
 }

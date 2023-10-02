@@ -3,16 +3,9 @@
     <!-- <a :style="elected ? 'color:white'" href="#about">About</a> -->
 
     <div class="image-outer">
-      <img
-        class="rounded-full imgcircle"
-        src="../public/1696142348770.jpg"
-        alt=""
-      />
+      <img class="rounded-full imgcircle" src="../public/1696142348770.jpg" alt="" />
     </div>
-    <div
-      :class="['sideTitles', { elected: isActive === 'about' }]"
-      @click="changeActiveElement('about', $event)"
-    >
+    <div :class="['sideTitles', { elected: isActive === 'about' }]" @click="changeActiveElement('about', $event)">
       About
     </div>
     <div

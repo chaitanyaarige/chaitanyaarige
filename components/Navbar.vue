@@ -25,11 +25,7 @@
               stroke="currentColor"
               aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             <!--
             Icon when menu is open.
@@ -44,17 +40,11 @@
               stroke="currentColor"
               aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <div
-          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
-        >
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
             <img
               class="h-8 w-auto"
@@ -65,10 +55,7 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a
-                href="#"
-                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                aria-current="page"
+              <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page"
                 >Dashboard</a
               >
               <a
@@ -90,9 +77,7 @@
           </div>
         </div>
 
-        <div
-          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-        >
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <div>
             <p class="p-4 pb-2">
               <select
@@ -102,6 +87,7 @@
                 <option value="system">System</option>
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
+                <option value="sepia">Cafe</option>
               </select>
             </p>
             <NuxtPage class="mx-auto p-4" />
@@ -159,14 +145,13 @@
               To: "transform opacity-0 scale-95"
           -->
 
-            <div
+            <!-- <div
               class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu-button"
               tabindex="-1"
             >
-              <!-- Active: "bg-gray-100", Not Active: "" -->
               <a
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700"
@@ -191,7 +176,7 @@
                 id="user-menu-item-2"
                 >Sign out</a
               >
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -201,10 +186,7 @@
     <div class="sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a
-          href="#"
-          class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-          aria-current="page"
+        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page"
           >Dashboard</a
         >
         <a
@@ -229,6 +211,7 @@
 
 <script setup>
 const colorMode = useColorMode();
+console.log(colorMode.preference);
 </script>
 
 <style lang="css">
@@ -236,5 +219,14 @@ const colorMode = useColorMode();
   display: flex;
   margin: auto auto 0;
   padding: 0.5rem;
+}
+
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
+.sepia-mode body {
+  background-color: #f1e7d0;
+  color: #433422;
 }
 </style>
