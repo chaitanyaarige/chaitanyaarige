@@ -10,3 +10,7 @@ Use VITE to develop app.
 Use vue script Setup
 Dynamically Load components ... DRY rule
 https://ruslan.rocks/posts/vite-module-federation
+
+Fun facts
+
+Apps which I already made without DB/json file dummy data

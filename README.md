@@ -1,7 +1,9 @@
+This Github app is deployed at https://chaiarige.in
+
 - 👋 Hi, I’m @chaitanyaarige
-- 👀 I’m passionate in Coding/Programming. 
+- 👀 I’m passionate in Coding/Programming.
 - 🌱 I’m currently learning software developement cycle.
-- 💞️ I’m looking to collaborate on Full Stack Development. 
+- 💞️ I’m looking to collaborate on Full Stack Development.
 - 📫 How to reach me DM me at @chaitanyaarige
 
 <!---
