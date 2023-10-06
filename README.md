@@ -1,4 +1,4 @@
-This Github app is deployed at https://chaiarige.in
+This Github app is deployed at [link](https://chaiarige.in){:target="\_blank"}
 
 - 👋 Hi, I’m @chaitanyaarige
 - 👀 I’m passionate in Coding/Programming.
