@@ -2,7 +2,7 @@
   <div class="main">
     <div class="name">Krishna Chaitanya <span> Arige </span></div>
 
-    <div>✓ I am experienced Softwared Developer.</div>
+    <div>✓ I am experienced Software Developer.</div>
     <div>✓ I have pursued Aeronautical Engineering in Bachelors of Technology.</div>
     <div>✓ I have pursued Computational Fluid Dynamics in Master's.</div>
     <div>✓ Full Stack Engineer</div>
